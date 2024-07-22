@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: niklasburchhardt <niklasburchhardt@stud    +#+  +:+       +#+        */
+/*   By: nburchha <nburchha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 14:05:59 by niklasburch       #+#    #+#             */
-/*   Updated: 2024/07/15 14:38:04 by niklasburch      ###   ########.fr       */
+/*   Updated: 2024/07/22 10:18:09 by nburchha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,24 +56,6 @@ void ScavTrap::attack(const std::string& target)
 		return ;
 	}
 	std::cout << "ScavTrap " << _name << " attacks " << target << ", causing " << _attackDamage << " points of damage!" << std::endl;
-}
-
-void ScavTrap::takeDamage(unsigned int amount)
-{
-	_hitPoints -= amount;
-	std::cout << "ScavTrap " << _name << " takes " << amount << " points of damage!" << std::endl;
-}
-
-void ScavTrap::beRepaired(unsigned int amount)
-{
-	if (_energyPoints > 0 && _hitPoints > 0)
-		--_energyPoints;
-	else {
-		std::cout << "ScavTrap " << _name << " cannot repair, too little energy or health points!" << std::endl;
-		return ;
-	}
-	_hitPoints += amount;
-	std::cout << "ScavTrap " << _name << " is being repaired for " << amount << " points!" << std::endl;
 }
 
 void ScavTrap::guardGate()

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: niklasburchhardt <niklasburchhardt@stud    +#+  +:+       +#+        */
+/*   By: nburchha <nburchha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 13:38:53 by niklasburch       #+#    #+#             */
-/*   Updated: 2024/07/15 14:36:35 by niklasburch      ###   ########.fr       */
+/*   Updated: 2024/07/22 10:39:29 by nburchha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void ClapTrap::beRepaired(unsigned int amount)
         return;
     }
     _hitPoints += amount;
-    std::cout << "ClapTrap " << _name << " is repaired for " << amount << " hit points!" << std::endl;
+    std::cout << "ClapTrap " << _name << " is repaired for " << amount << " hit points! His health is now " << _hitPoints << "!" << std::endl;
 }
 
 void ClapTrap::takeDamage(unsigned int amount)
